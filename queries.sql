@@ -38,5 +38,11 @@ FROM employee e
 	INNER JOIN department_emp de ON e.emp_no = de.emp_no 
 	INNER JOIN department d ON de.dept_no = d.dept_no
 	WHERE dept_name = 'Sales' OR dept_name = 'Development'
+	
+--Last name count
+SELECT last_name, COUNT(last_name)
+FROM employee
+GROUP BY last_name 
+ORDER BY last_name DESC;
 
 
